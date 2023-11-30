@@ -29,7 +29,11 @@ const getById = async (req, res, next) => {
 };
 
 const addMovie = async (req, res, next) => {
-  const { name, author, description, price, available, image } = req.body;
+  const {  title,
+    description,
+    genre,
+    release_year,
+    reviews, } = req.body;
   let movie;
   try {
     movie = new Movie({
